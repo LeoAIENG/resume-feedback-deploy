@@ -1,0 +1,132 @@
+services:
+  model_1:
+    container_name: model_1
+    image: $IMAGE_URL
+    restart: always
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: all
+            capabilities:
+              - gpu
+    shm_size: '1g'
+    ports:
+      - $EXTERNAL_PORT:$INTERNAL_PORT
+    volumes:
+      - $VOLUME:/data
+    environment:
+      - HF_TOKEN=$HF_TOKEN
+      - MODEL_ID=$MODEL_1_HF_ID
+      - DTYPE=$DTYPE
+
+  model_2:
+    container_name: model_2
+    image: $IMAGE_URL
+    restart: always
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: all
+            capabilities:
+              - gpu
+    shm_size: '1g'
+    ports:
+      - $EXTERNAL_PORT:$INTERNAL_PORT
+    volumes:
+      - $VOLUME:/data
+    environment:
+      - HF_TOKEN=$HF_TOKEN
+      - MODEL_ID=$MODEL_2_HF_ID
+      - DTYPE=$DTYPE
+
+  model_3:
+    container_name: model_3
+    image: $IMAGE_URL
+    restart: always
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: all
+            capabilities:
+              - gpu
+    shm_size: '1g'
+    ports:
+      - $EXTERNAL_PORT:$INTERNAL_PORT
+    volumes:
+      - $VOLUME:/data
+    environment:
+      - HF_TOKEN=$HF_TOKEN
+      - MODEL_ID=$MODEL_3_HF_ID
+      - DTYPE=$DTYPE
+
+  model_4:
+    container_name: model_4
+    image: $IMAGE_URL
+    restart: always
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: all
+            capabilities:
+              - gpu
+    shm_size: '1g'
+    ports:
+      - $EXTERNAL_PORT:$INTERNAL_PORT
+    volumes:
+      - $VOLUME:/data
+    environment:
+      - HF_TOKEN=$HF_TOKEN
+      - MODEL_ID=$MODEL_4_HF_ID
+      - DTYPE=$DTYPE
+
+  model_5:
+    container_name: model_5
+    image: $IMAGE_URL
+    restart: always
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: all
+            capabilities:
+              - gpu
+    shm_size: '1g'
+    ports:
+      - $EXTERNAL_PORT:$INTERNAL_PORT
+    volumes:
+      - $VOLUME:/data
+    environment:
+      - HF_TOKEN=$HF_TOKEN
+      - MODEL_ID=$MODEL_5_HF_ID
+      - DTYPE=$DTYPE
+
+  model_6:
+    container_name: model_6
+    image: $IMAGE_URL
+    restart: always
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: all
+            capabilities:
+              - gpu
+    shm_size: '1g'
+    ports:
+      - $EXTERNAL_PORT:$INTERNAL_PORT
+    volumes:
+      - $VOLUME:/data
+    environment:
+      - HF_TOKEN=$HF_TOKEN
+      - MODEL_ID=$MODEL_6_HF_ID
+      - DTYPE=$DTYPE

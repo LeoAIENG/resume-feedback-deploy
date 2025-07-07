@@ -1,0 +1,22 @@
+services:
+  model_2:
+    container_name: model_2
+    image: $IMAGE_URL
+    restart: always
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: all
+            capabilities:
+              - gpu
+    shm_size: '1g'
+    ports:
+      - $EXTERNAL_PORT:$INTERNAL_PORT
+    volumes:
+      - $VOLUME:/data
+    environment:
+      - HF_TOKEN=$HF_TOKEN
+      - MODEL_ID=$MODEL_2_HF_ID
+      - DTYPE=$DTYPE

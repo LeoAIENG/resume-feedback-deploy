@@ -1,0 +1,16 @@
+[project]
+name = "app-main"
+version = "0.1.0"
+description = "resume Critique Application"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp>=3.11.13",
+    "fastapi>=0.115.11",
+    "gunicorn>=23.0.0",
+    "guvicorn-logger>=0.1.17",
+    "nltk>=3.9.1",
+    "pyyaml>=6.0.2",
+    "requests>=2.32.3",
+    "uvicorn>=0.34.0",
+]
